@@ -19,13 +19,12 @@
 
 <category>
     <pattern>HOWDY</pattern>
-    <delay></delay>
     <template><srai>HI</srai></template>
     
 </category>
 
 <category>
-    <pattern><set>positive</set> ^</pattern>
+    <pattern><set>positive</set></pattern>
     <template><srai>YES</srai></template>
 </category>
 
@@ -141,7 +140,7 @@
     </template>
 </category>
 
-<!-- Question for Hardware Designer -->
+<!-- Question for Data Analyst -->
 <category>
     <pattern>Data Analyst</pattern>
     <template>Are you interested in statistical analysis and deep learning?<br />
@@ -161,12 +160,4 @@
     <template>I recommend you to become a <star/>.<br />Good luck!</template>
 </category>
 
-<category>
-    <pattern>Hi, Nice to meet you </pattern>
-    <template>Me too</template>
-</category>
-<category>
-    <pattern></pattern>
-    <template></template>
-</category>
 </aiml>
