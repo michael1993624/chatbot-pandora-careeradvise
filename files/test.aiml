@@ -20,6 +20,7 @@
 <category>
     <pattern>HOWDY</pattern>
     <template><srai>HI</srai></template>
+    <delay></delay>
 </category>
 
 <category>
