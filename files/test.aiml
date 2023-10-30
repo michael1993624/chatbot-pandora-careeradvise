@@ -19,8 +19,9 @@
 
 <category>
     <pattern>HOWDY</pattern>
-    <template><srai>HI</srai></template>
     <delay></delay>
+    <template><srai>HI</srai></template>
+    
 </category>
 
 <category>
