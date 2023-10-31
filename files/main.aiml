@@ -3,8 +3,8 @@
 	<!-- insert your AIML categories here -->
 <!-- Greeting -->
 <category>
-    <pattern>HI</pattern>
-    <template>Hello, I am a career adviser for students who are about to graduate with a degree in computer science like you.<br />May I ask you <set name="topic">some questions</set>?</template>
+    <pattern>FIVE</pattern>
+    <template>Sure, I will be happy to help you. Here are five examples of amazing opportunities in computer science.<br />May I ask you <set name="topic">some questions</set>?</template>
 </category>
 
 <category>
