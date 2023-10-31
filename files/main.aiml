@@ -1,4 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 	<!-- insert your AIML categories here -->
+<!-- Greeting -->
+<category>
+    <pattern>HI</pattern>
+    <template>Hello, I am a career adviser for students who are about to graduate with a degree in computer science like you.<br />May I ask you <set name="topic">some questions</set>?</template>
+</category>
+
+<category>
+    <pattern>HELLO</pattern>
+    <template><srai>HI</srai></template>
+</category>
+
+<category>
+    <pattern>HI THERE</pattern>
+    <template><srai>HI</srai></template>
+</category>
+
+<category>
+    <pattern>HOWDY</pattern>
+    <template><srai>HI</srai></template>
+</category>
+
+<category>
+    <pattern><set>positive</set> ^</pattern>
+    <template><srai>YES</srai></template>
+</category>
+
+<category>
+    <pattern>GENERALBYE</pattern>
+    <template>This quality is essential to IT technician. <srai>BYE</srai></template>
+</category>
+<category>
+    <pattern>BYE</pattern>
+    <template>I cannot recommend you suit job for you.<br /> Have a good day.<set name="topic"></set></template>
+</category>
+
+<!-- General question 1 -->
+<topic name= "some questions">
+    <category>
+        <pattern>YES</pattern>
+        <template>Can you <set name="topic">push yourself forward</set>, stay motivated and take action, regardless of how you're feeling, physically, or emotionally?</template>
+    </category>
+
+    <category>
+        <pattern>NO</pattern>
+        <template>Have a great day. Thank you.</template>
+    </category>
+</topic>
+
+<!-- General question 2 -->
+<topic name= "push yourself forward">
+    <category>
+        <pattern>YES</pattern>
+        <template>Do you have great <set name="topic">attention to detail</set> to be able to detect tiny miscalculations and errors?</template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <template><srai>GENERALBYE</srai></template>
+    </category>
+</topic>
+
+<!-- General question 3 -->
+<topic name= "attention to detail">
+    <category>
+        <pattern>YES</pattern>
+        <template>Are you <set name="topic">passionate</set> about technology and always eager to learn more?</template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <template><srai>GENERALBYE</srai></template>
+    </category>
+</topic>
+
+<!-- Question for Front-End Developer -->
+<topic name= "passionate">
+    <category>
+        <pattern>YES</pattern>
+        <template>Do you have experience with HTML, CSS and Javascript?<set name="topic"></set><br />
+            <button>
+                <text>Yes</text>
+                <postback>Job found Front End Developer</postback>
+            </button>
+            <button>
+                <text>No</text>
+                <postback>BACKENDDEV</postback>
+            </button>        
+        </template>
+    </category>
+    <category>
+        <pattern>NO</pattern>
+        <template><srai>BYE</srai></template>
+    </category>
+</topic>
+
+<!-- Question for Back-End Developer -->
+<category>
+    <pattern>BACKENDDEV</pattern>
+    <template>Are you familar with back end frameworks like Node.js, Spring or Laravel?<br />
+        <button>
+            <text>Yes</text>
+            <postback>Job found Back End Developer</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>UI Designer</postback>
+        </button>        
+    </template>
+</category>
+
+<!-- Question for UI Designer -->
+<category>
+    <pattern>UI Designer</pattern>
+    <template>Do you have an eye for color, spacing, patterns and typology?<br />
+        <button>
+            <text>Yes</text>
+            <postback>Job found UI Designer</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>Hardware Designer</postback>
+        </button>        
+    </template>
+</category>
+
+<!-- Question for Hardware Designer -->
+<category>
+    <pattern>Hardware Designer</pattern>
+    <template>Do you like design circuit board and other hardware components?<br />
+        <button>
+            <text>Yes</text>
+            <postback>Job found Hardware Designer</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>Data Analyst</postback>
+        </button>        
+    </template>
+</category>
+
+<!-- Question for Hardware Designer -->
+<category>
+    <pattern>Data Analyst</pattern>
+    <template>Are you interested in statistical analysis and deep learning?<br />
+        <button>
+            <text>Yes</text>
+            <postback>Job found Data Analyst</postback>
+        </button>
+        <button>
+            <text>No</text>
+            <postback>BYE</postback>
+        </button>        
+    </template>
+</category>
+
+<category>
+    <pattern>Job found *</pattern>
+    <template>I recommend you to become a <star/>.<br />Good luck!</template>
+</category>
+
+<category>
+    <pattern>Hi, Nice to meet you </pattern>
+    <template>Me too</template>
+</category>
+<category>
+    <pattern></pattern>
+    <template></template>
+</category>
 </aiml>
